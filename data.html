@@ -49,13 +49,17 @@
         </div><!--/.navbar-collapse -->
       </div>
     </div>
+ <div id='map'></div>
 
-<div id='map'></div>
+
     <script>
 // Provide your access token
 L.mapbox.accessToken = 'pk.eyJ1IjoibWhmcmVlbWFuMTEiLCJhIjoiTWhoNW1tbyJ9.3qrqbg9MiPLym6hM4l8L1A';
 // Create a map in the div #map
-var map = L.mapbox.map('map', 'mhfreeman11.jgc7h0k8');
+var map = L.mapbox.map('map', 'mhfreeman11.jgc7h0k8')
+.addControl(L.mapbox.geocoderControl('mapbox.places-v1', {
+        autocomplete: true
+    }));
 </script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
